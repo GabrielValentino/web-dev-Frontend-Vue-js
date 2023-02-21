@@ -17,7 +17,7 @@ export default {
   methods: {
     async submitNewFilm() {
       try {
-        await axios.post('http://localhost:3000/locations', {
+        await axios.post('https://web-dev-backend-valentino.onrender.com/locations', {
           filmName: this.filmName,
           filmType: this.filmType,
           filmDirectorName: this.filmDirectorName,

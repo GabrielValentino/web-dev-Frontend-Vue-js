@@ -24,7 +24,7 @@ export default {
   methods: {
     async userRole() {
       try {
-        const response = await axios.get('http://localhost:3000/users/me', {
+        const response = await axios.get('https://web-dev-backend-valentino.onrender.com/users/me', {
           headers: {
             'Authorization': `Bearer ${this.token}`,
           }
@@ -35,7 +35,7 @@ export default {
       }
     },
     async fetchFilms() {
-      const { data } = await axios.get('http://localhost:3000/locations?limit=1000', {
+      const { data } = await axios.get('https://web-dev-backend-valentino.onrender.com/locations?limit=1000', {
         headers: {
           'Authorization': `Bearer ${this.token}`,
         }});

@@ -26,7 +26,7 @@ export default {
     },
     async getFilms() {
       try {
-        const { data } = await axios.get('http://localhost:3000/locations', {
+        const { data } = await axios.get('https://web-dev-backend-valentino.onrender.com/locations', {
           headers: {
             'Authorization': `Bearer ${this.token}`,
           },

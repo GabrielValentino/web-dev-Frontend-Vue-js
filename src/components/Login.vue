@@ -11,7 +11,7 @@ export default {
   },
   methods: {
     async userRole() {
-      const response = await axios.get('http://localhost:3000/users/me', {
+      const response = await axios.get('https://web-dev-backend-valentino.onrender.com/users/me', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         }
@@ -20,10 +20,10 @@ export default {
     },
     async login(username, password) {
       try {
-        const response = await axios.post('http://localhost:3000/users/login', {username, password});
+        const response = await axios.post('https://web-dev-backend-valentino.onrender.com/users/login', {username, password});
         localStorage.setItem('token', response.data.jwt);
         localStorage.setItem('username', username);
-        const tmp = await axios.get('http://localhost:3000/users/me', {
+        const tmp = await axios.get('https://web-dev-backend-valentino.onrender.com/users/me', {
           headers: {
             'Authorization': `Bearer ${response.data.jwt}`,
           }

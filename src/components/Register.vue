@@ -12,20 +12,20 @@ export default {
   methods: {
     async submitRegister() {
       try {
-        const response = await axios.post('http://localhost:3000/users/register', {
+        const response = await axios.post('https://web-dev-backend-valentino.onrender.com/users/register', {
           username: this.username,
           password: this.password,
         });
         //await Login.login(this.username, this.password);
 
         try {
-          const response = await axios.post('http://localhost:3000/users/login', {
+          const response = await axios.post('https://web-dev-backend-valentino.onrender.com/users/login', {
             username: this.username,
             password: this.password,
           });
           localStorage.setItem('token', response.data.jwt);
           localStorage.setItem('username', this.username);
-          /*const tmp = await axios.get('http://localhost:3000/users/me', {
+          /*const tmp = await axios.get('https://web-dev-backend-valentino.onrender.com/users/me', {
             headers: {
               'Authorization': `Bearer ${response.data.jwt}`,
             }

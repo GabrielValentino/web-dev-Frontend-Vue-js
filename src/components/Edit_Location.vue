@@ -21,7 +21,7 @@ export default {
   methods: {
     async fetchFilm() {
       try {
-        const { data } = await axios.get(`http://localhost:3000/locations/${this.filmId}`, {
+        const { data } = await axios.get(`https://web-dev-backend-valentino.onrender.com/locations/${this.filmId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           }
@@ -40,7 +40,7 @@ export default {
     },
     async confirm_Edit() {
       try {
-        await axios.patch(`http://localhost:3000/locations/${this.filmId}`, {
+        await axios.patch(`https://web-dev-backend-valentino.onrender.com/locations/${this.filmId}`, {
           filmName: this.filmName,
           filmType: this.filmType,
           filmDirectorName: this.filmDirectorName,

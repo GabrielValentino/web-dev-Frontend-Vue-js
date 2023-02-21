@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     async fetchFilmInfos() {
-      const {data} = await axios.get(`http://localhost:3000/locations/${this.filmId}`, {
+      const {data} = await axios.get(`https://web-dev-backend-valentino.onrender.com/locations/${this.filmId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("token")}`,
         }
@@ -24,7 +24,7 @@ export default {
     },
     async userRole() {
       try {
-        const response = await axios.get('http://localhost:3000/users/me', {
+        const response = await axios.get('https://web-dev-backend-valentino.onrender.com/users/me', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem("token")}`,
           }
@@ -36,7 +36,7 @@ export default {
     },
     async Delete_Location() {
       try {
-        await axios.delete(`http://localhost:3000/locations/${this.filmId}`, {
+        await axios.delete(`https://web-dev-backend-valentino.onrender.com/locations/${this.filmId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           }
